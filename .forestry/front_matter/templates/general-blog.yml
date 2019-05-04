@@ -1,0 +1,23 @@
+---
+label: General Blog
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+  description: A Headline Image
+- type: datetime
+  name: date
+  label: Date
+  description: Publish Date
+- type: tag_list
+  name: tags
+  label: Tags
+  description: Tags for SEO and search
