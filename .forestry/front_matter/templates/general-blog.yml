@@ -21,3 +21,5 @@ fields:
   name: tags
   label: Tags
   description: Tags for SEO and search
+pages:
+- content/blog/testing.md
