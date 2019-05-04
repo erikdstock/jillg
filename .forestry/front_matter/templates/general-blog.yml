@@ -21,5 +21,13 @@ fields:
   name: tags
   label: Tags
   description: Tags for SEO and search
+- name: collectionname
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: collectionName
+  description: for sorting in code
+  default: blog
 pages:
 - content/blog/testing.md
