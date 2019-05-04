@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: `gatsby-mdx`,
       options: {
-        extensions: [".mdx"],
+        extensions: [".mdx", ".md"],
         DefaultMDXLayouts: {
           // define more Layouts here if you like,
           // matching keys to the `name` from a gatsby-source-filesystem config (eg `blog`)
