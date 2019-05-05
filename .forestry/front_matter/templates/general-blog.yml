@@ -30,4 +30,5 @@ fields:
   description: for sorting in code
   default: blog
 pages:
+- content/blog/test-2.md
 - content/blog/testing.md
