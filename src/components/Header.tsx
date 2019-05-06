@@ -1,11 +1,20 @@
 import { Link } from "gatsby"
 import React from "react"
+import { BoxProps } from "rebass"
 import { Box, Text } from "rebass"
 
-const Header: React.FunctionComponent<{ siteTitle: string }> = ({
+const Header: React.FunctionComponent<{ siteTitle: string } & BoxProps> = ({
   siteTitle,
+  width,
+  flex,
 }) => (
-  <Box bg="rebeccapurple" mb="1.45rem">
+  <Box
+    flex={flex}
+    width={width}
+    // height={height}
+    bg="rebeccapurple"
+    mb="1.45rem"
+  >
     <Box my={0} mx="auto" p="1.45rem 1.0875rem">
       <Link
         to="/"

@@ -2,7 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import { Box, Flex } from "rebass"
-import { maxWidth, MaxWidthProps } from "styled-system"
+import {
+  maxWidth,
+  MaxWidthProps,
+  minHeight,
+  MinHeightProps,
+} from "styled-system"
 import Header from "../components/Header"
 import styled from "styled-components"
 
@@ -10,8 +15,8 @@ const PageContent = styled(Box)<MaxWidthProps>`
   ${maxWidth};
 `
 
-const PageHeight = styled(Flex)`
-  min-height: 100vh;
+const PageHeight = styled(Flex)<MinHeightProps>`
+  ${minHeight}
 `
 
 const Layout = ({ children }) => (
@@ -26,13 +31,14 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <PageHeight flexDirection="column">
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <PageContent
-          alignSelf="center"
-          width={[1, 0.75, 0.6]}
-          maxWidth={["560px"]}
-        >
+      <PageHeight minHeight={[null, "100vh"]} flexDirection={["column", "row"]}>
+        <Header
+          width={["100%", "360px"]} // 100% in mobile, 360px in desktop
+          // height={[200, "100%"]}
+          flex="0 0 auto"
+          siteTitle={data.site.siteMetadata.title}
+        />
+        <PageContent alignSelf="center" width={[1, 0.75, 0.6]} maxWidth="720px">
           <Box p="0px 1.0875rem 1.45rem">
             <main>{children}</main>
           </Box>
